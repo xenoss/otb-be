@@ -49,7 +49,7 @@ public class MessageQueueMDB implements MessageListener {
             }
         }
 
-        aerospikeClient.put(null, new Key("namespace", "set", message.getId()),
+        aerospikeClient.put(null, new Key("test_namespace", "set", message.getId()),
                 new Bin("sender", message.getSender()),
                 new Bin("receiver", message.getReceiver()),
                 new Bin("text", message.getText()),
